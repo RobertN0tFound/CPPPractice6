@@ -11,11 +11,11 @@ int main()
     int f = 0;
 
     setlocale(LC_ALL, "Russian");
-    a1:printf("\nВведите длину массива >> ");
+    printf("\nВведите длину массива >> ");
     scanf_s("%d", &n);
     if (n > 30 || n < 1)
     {
-        printf("\nERROR"); goto a1;
+        printf("\nERROR");
     }
     for (i = 0; i < n; i++)
     {
@@ -36,9 +36,9 @@ int main()
         if (min > a[i]) min = a[i];
         if (max < a[i]) max = a[i];
     }
-    if (k > 0) printf("\nКол-во положительных: %d", k);
+    if (k > 0) printf("\nКоличество положительных чисел в массиве: %d", k);
     else printf("\nПоложительных чисел нет");
-    if (f > 0) printf("\nКол-во отрицательных: %d", f);
+    if (f > 0) printf("\nКоличество отрицательных чисел в массиве: %d", f);
     else printf("\nОтрицательных чисел нет");
     printf("\nМаксимальное значение = %d Минимальное значение = %d", min, max);
 }
